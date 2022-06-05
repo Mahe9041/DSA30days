@@ -1,0 +1,66 @@
+There is not always only one way to solve a problem. There is more then one way to solve one problem but we never know the right one to use.
+At that point of time this come to the picture. There are there two imp things which help us compair two different codes solving same problem.
+The criteria are:
+1.Time complexity 
+2.Space complexity
+
+#TIME COMPLEXITY:
+ The time complexity of an algorithm quantifies the amount of time taken by an algorithm to run as a function of the length of the input. Note that the time to 
+ run is a function of the length of the input and not the actual execution time of the machine on which the algorithm is running on.
+ 
+ In order to calculate time complexity on an algorithm, it is assumed that a constant time c is taken to execute one operation, and then the total operations for 
+ an input length on N are calculated. Consider an example to understand the process of calculation: Suppose a problem is to find whether a pair (X, Y) exists in an 
+ array, A of N elements whose sum is Z. The simplest idea is to consider every pair and check if it satisfies the given condition or not.
+ 
+ The pseudo-code is as follows:
+ int a[n];
+ for(int i = 0;i < n;i++)
+  cin >> a[i]
+  
+
+ for(int i = 0;i < n;i++)
+  for(int j = 0;j < n;j++)
+    if(i!=j && a[i]+a[j] == z)
+       return true
+
+ return false
+ 
+ 
+ Assuming that each of the operations in the computer takes approximately constant time, let it be c. The number of lines of code executed actually depends on 
+ the value of Z. During analyses of the algorithm, mostly the worst-case scenario is considered, i.e., when there is no pair of elements with sum equals Z. In the 
+ worst case, 
+
+ N*c operations are required for input.
+ The outer loop i loop runs N times.
+ For each i, the inner loop j loop runs N times.
+ So total execution time is N*c + N*N*c + c. Now ignore the lower order terms since the lower order terms are relatively insignificant for large input, therefore only 
+ the highest order term is taken (without constant) which is N*N in this case. Different notations are used to describe the limiting behavior of a function, but since 
+ the worst case is taken so big-O notation will be used to represent the time complexity.
+
+Hence, the time complexity is O(N2) for the above algorithm. Note that the time complexity is solely based on the number of elements in array A i.e the input length, 
+so if the length of the array will increase the time of execution will also increase.
+
+
+Input Length                              	Worst Accepted Time Complexity	                        Usually type of solutions
+
+10 -12                                      O(N!)                                                   Recursion and backtracking
+
+15-18                                       O(2N * N)                                               Recursion, backtracking, and bit manipulation
+
+18-22                                       O(2N * N)                                               Recursion, backtracking, and bit manipulation
+
+30-40                                       O(2N/2 * N)	                                            Meet in the middle, Divide and Conquer
+
+100                                         O(N4)                                                   Dynamic programming, Constructive
+
+400                                         O(N3)                                                   Dynamic programming, Constructive
+
+2K                                          O(N2* log N)                                            Dynamic programming, Binary Search, Sorting, Divide and Conquer
+
+10K                                         O(N2)                                                   Dynamic programming, Graph, Trees, Constructive
+
+1M                                          O(N* log N)                                             Sorting, Binary Search, Divide and Conquer
+
+100M                                        O(N), O(log N), O(1)                                    Constructive, Mathematical, Greedy Algorithms
+
+
