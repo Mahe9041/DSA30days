@@ -1,0 +1,26 @@
+print name 5 times
+print linearly from 1 to N
+print from N to 1
+print linearly from 1 to N (but by backtracking)
+print lineary from N to 1 (but by backtarcking)
+
+#include <iostream>
+
+using namespace std;
+int name(int i,int n)
+{
+    if(i>n)
+    {
+        return 0;
+    }
+    cout<<"S Mahesh";
+    name(i+1,n);
+}
+int main()
+{
+    int n;
+    cin>>n;
+    name(1,n);
+    return 0;
+}
+
