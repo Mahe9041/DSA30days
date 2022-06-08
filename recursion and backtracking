@@ -1,3 +1,6 @@
 #RECURSION 
-The process in which a function calls itself directly or indirectly is called recursion and the corresponding function is called a recursive function. 
-....09u
+The process in which a function calls itself directly or indirectly is called recursion and the corresponding function is called a recursive function.
+When a funtion calls itself untill a specified condition is met.
+->base case: the end condition when the recurtion breaks and starts to return.
+->stackflow: when there is no end condition in a recursion the programme runs till memory stack is completely filled this is called stackover flow.
+->recursion tree-> way of representing recurion calls.
