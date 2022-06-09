@@ -24,3 +24,23 @@ int main()
     return 0;
 }
 
+#include <iostream>
+
+using namespace std;
+
+int prtn(int n)
+{
+    if(n<=0)
+    return 0;
+    cout<<n;
+    prtn(--n);
+    
+}
+
+int main()
+{
+    int n;
+    cin>>n;
+    prtn(n);
+    return 0;
+}
