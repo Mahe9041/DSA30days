@@ -3,7 +3,7 @@ print linearly from 1 to N
 print from N to 1
 print linearly from 1 to N (but by backtracking)
 print lineary from N to 1 (but by backtarcking)
-
+.......................................................................................................................................................................
 #include <iostream>
 
 using namespace std;
@@ -23,7 +23,29 @@ int main()
     name(1,n);
     return 0;
 }
+.......................................................................................................................................................................
+#include <iostream>
 
+using namespace std;
+
+int prtn(int i,int n)
+{
+    if(i>n)
+    return 0;
+    cout<<i;
+    prtn(++i,n);
+    
+}
+
+int main()
+{
+    int n;
+    cin>>n;
+    prtn(1,n);
+    return 0;
+}
+
+.......................................................................................................................................................................
 #include <iostream>
 
 using namespace std;
