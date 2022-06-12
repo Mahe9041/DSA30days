@@ -14,4 +14,4 @@ normal recusion statement.
 2.Funtional form:
 recursion call is inside return statement.
 
-subsiquence:
+subsequence : it is like a sub array in which the order of the elements is same as order of main array but there can be as many elements as possible.
