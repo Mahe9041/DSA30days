@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int print(int ind,vector <int> &gr,int arr[],int n)
+{
+if(ind==n)
+{
+for(auto it:gr)
+{
+cout<<it;
+}
+cout<<endl;
+return 0;
+}
+gr.push_back(arr[ind]);
+print(ind+1,gr,arr,n);
+gr.pop_back();
+print(ind+1,gr,arr,n);
+return 0;
+}
+int main()
+{
+int n=3,arr[]={3,1,2};
+
+vector <int> gr;
+print(0,gr,arr,n);
+}
