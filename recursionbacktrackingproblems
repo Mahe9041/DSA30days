@@ -284,3 +284,69 @@ Output: [["Q"]]
 Constraints:
 
 1 <= n <= 9
+
+.......................................................................................................................................................................
+class Solution {
+public:
+    int issafe(int r,int c,vector<string> b,int n)
+    {
+        int row=r,col=c;
+        while(row>=0 && col>=0)
+        {
+            if(b[row][col]=='Q')
+            {
+                return 0;
+            }
+            row-=1;
+            col-=1;
+        }
+        row=r;col=c;
+        while(col>=0)
+        {
+            if(b[row][col]=='Q')
+            {
+                return 0;
+            }
+            col-=1;
+        }
+        col=c;
+        while(row<n && col>=0)
+        {
+            if(b[row][col]=='Q')
+            {
+                return 0;
+            }
+            row+=1;
+            col-=1;
+        }
+        return 1;
+    }
+    void solve(int col,vector<string> &b,vector<vector<string>> &ans,int n)
+    {
+        if(col==n)
+        {
+            ans.push_back(b);
+            return;
+        }
+        for(int row=0;row<n;row++)
+        {
+            if(issafe(row,col,b,n)==1)
+            {
+                b[row][col]='Q';
+                solve(col+1,b,ans,n);
+                b[row][col]='.';
+            }
+        }
+    }
+    vector<vector<string>> solveNQueens(int n) {
+        vector<vector <string>> ans;
+        vector<string> board(n);
+        string s(n,'.');
+        for(int i=0;i<n;i++)
+        {
+            board[i]=s;
+        }
+        solve(0,board,ans,n);
+        return ans;
+    }
+};
